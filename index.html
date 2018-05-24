@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hansel and Petal</title>
+  <link rel="stylesheet" href="css/globalStyles.css">
+</head>
+<body>
+  <div class="site">
+    <div class="logo">
+      <img src="images/site/logo.png" width="207" height="124" alt="Hansel and Petal" />
+    </div>
+    <div id="allFlowers"></div>
+    <div id="copy"></div>
+  </div>
+
+  <script id="flowerElement" type="text/template">
+    <a href="#<%= link %>"><img src="<%= img %>" height="200px" alt="<%= name %>" class="image" /></a>
+    <ul>
+      <li class="flowerInfo"><strong>Name: </strong><%= name %></li>
+      <li class="flowerInfo"><strong>Price: </strong><%= price %></li>
+      <li class="flowerInfo"><strong>Color: </strong><%= color %></li>
+    </ul>
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+  <script src="js/models/singleFlowerModel.js"></script>
+  <script src="js/views/singleFlowerView.js"></script>
+  <script src="js/views/allFlowersView.js"></script>
+  <script src="js/collections/allFlowers.js"></script>
+  <script src="js/routes/router.js"></script>
+  <script src="js/flowerApp.js"></script>
+</body>
+</html>
